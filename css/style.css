@@ -3,6 +3,10 @@ body {
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .logo {
   width: 70px;
   border-radius: 50%;
@@ -239,7 +243,6 @@ button[type="submit"]:hover {
   background-color: #019c94;
 }
 
-/* Output message styling */
 #output {
   margin-top: 30px;
   padding: 5px;
@@ -248,10 +251,9 @@ button[type="submit"]:hover {
   border-radius: 8px;
   color: #2e7d32;
   font-size: 16px;
-  display: none; /* Hidden by default, can be shown with JS */
+  display: none;
 }
 
-/* Mobile responsive */
 @media (max-width: 600px) {
   .contact {
     padding: 30px 15px;
@@ -270,5 +272,85 @@ footer {
   .locations {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* Profile Page Styles */
+
+.profile-container {
+  padding: 60px 5vw;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  background-color: #fdfdfd;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.profile-container h1,
+.profile-container h2 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.profile-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.profile-container h2 {
+  font-size: 26px;
+  margin-top: 40px;
+}
+
+.profile-container p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.profile-container ul {
+  padding-left: 20px;
+}
+
+.profile-container li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.core-values li strong,
+.growth li strong {
+  color: #222;
+}
+
+.vision,
+.mission {
+  margin-bottom: 30px;
+}
+
+/* Icon Emoji spacing */
+.business-fields h2::before,
+.vision h2::before,
+.mission h2::before,
+.core-values h2::before,
+.growth h2::before,
+.future h2::before {
+  content: '';
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 40px 20px;
+  }
+
+  .profile-container h1 {
+    font-size: 28px;
+  }
+
+  .profile-container h2 {
+    font-size: 22px;
   }
 }
