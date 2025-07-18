@@ -14,8 +14,7 @@
     </a>
       <nav>
         <a href="index.html">Home</a>
-        <a href="profile.html">Our Profile</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a href="#our-profile">Our Profile</a>
         <a href="#message-us">Message Us</a>
       </nav>
     </div>
@@ -24,16 +23,26 @@
   <main>
     <section class="hero">
       <div class="welcome">
-        <h1>Hi <span id="userName">Ardian Gymnnastiar</span>, Welcome to Our Website 👋🏻</h1>
+        <h1>Hi <span id="userName">User</span>, Welcome to Our Website 👋🏻</h1>
         <h2>Transforming Ideas Into Impact</h2>
         <p>We craft digital solutions that elevate your business to the next level.</p>
       </div>
 
+      <div id="welcomeScreen" class="welcome-screen">
+        <div class="popup-box">
+          <h2>Welcome to Ard Company!</h2>
+          <p>Please enter your name to continue:</p>
+          <input type="text" id="inputName" placeholder="Your name..." />
+          <small id="nameWarning" class="warning-text"></small>
+          <button id="startBtn">Enter</button>
+        </div>
+      </div>
       <div class="banner">
         <img src="assets/banner.jpg" alt="Company Banner Photo">
       </div>
 
       <div class="about-company">
+        <h1 id="our-profile">Our Profile</h1>
         <h2>About the Company</h2>
         <p>
           ARD Company is a creative digital firm focused on developing integrated technology solutions. We believe that every great idea deserves to be executed with the right strategy and powerful technology.
@@ -76,24 +85,21 @@
     <section id="contact" class="contact">
       <h2 id="message-us">Message Us</h2>
       <form id="contactForm">
-        <label>Nama:
+        <label>Name:
           <input type="text" id="name" required />
         </label>
-        <label>Tanggal Lahir:
-          <input type="date" id="birthdate" required />
-        </label>
-        <label>Jenis Kelamin:</label>
+        <label>Gender :</label>
           <div class="gender-group">
             <label class="gender-option">
-              <input type="radio" name="gender" value="Laki-Laki" required />
-              Laki-Laki
+              <input type="radio" name="gender" value="Male" required />
+              Male
             </label>
             <label class="gender-option">
-              <input type="radio" name="gender" value="Perempuan" />
-              Perempuan
+              <input type="radio" name="gender" value="Female" />
+              Female
             </label>
           </div>
-        <label>Pesan:
+        <label>Massage:
           <textarea id="message" required></textarea>
         </label>
         <button type="submit">Submit</button>
@@ -104,7 +110,7 @@
   </main>
 
   <footer>
-    Created by Ardian Gymnnastiar © 2025
+    © 2025 Ard Company. All rights reserved.
   </footer>
 
   <script src="js/script.js"></script>

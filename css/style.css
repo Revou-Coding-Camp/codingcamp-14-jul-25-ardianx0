@@ -32,7 +32,76 @@ html {
 .navbar a:hover {
   transform: scale(1.05);
 }
+/* Fullscreen Overlay */
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
+/* Modal Box in Center */
+.popup-box {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeInScale 0.3s ease;
+}
+
+/* Input dan Button */
+.popup-box input {
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.popup-box button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #666;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background-color: #444;
+}
+
+.warning-text {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 6px;
+  display: block;
+  height: 18px;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .hero {
   padding: 60px 5vw;
   max-width: 1200px;
@@ -87,12 +156,16 @@ html {
 .vision-mission {
   margin-top: 50px;
 }
-
+.about-company h1 {
+  font-size: 36px;
+  color: #111;
+  word-wrap: break-word;
+}
 .about-company h2,
 .vision-mission h2 {
   font-size: 28px;
   margin-bottom: 12px;
-  color: #111;
+  color: #333;
 }
 
 .about-company p,
@@ -288,69 +361,3 @@ footer {
   box-sizing: border-box;
 }
 
-.profile-container h1,
-.profile-container h2 {
-  color: #333;
-  margin-bottom: 16px;
-}
-
-.profile-container h1 {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.profile-container h2 {
-  font-size: 26px;
-  margin-top: 40px;
-}
-
-.profile-container p {
-  font-size: 16px;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-.profile-container ul {
-  padding-left: 20px;
-}
-
-.profile-container li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #333;
-}
-
-.core-values li strong,
-.growth li strong {
-  color: #222;
-}
-
-.vision,
-.mission {
-  margin-bottom: 30px;
-}
-
-/* Icon Emoji spacing */
-.business-fields h2::before,
-.vision h2::before,
-.mission h2::before,
-.core-values h2::before,
-.growth h2::before,
-.future h2::before {
-  content: '';
-  margin-right: 8px;
-}
-
-@media (max-width: 768px) {
-  .profile-container {
-    padding: 40px 20px;
-  }
-
-  .profile-container h1 {
-    font-size: 28px;
-  }
-
-  .profile-container h2 {
-    font-size: 22px;
-  }
-}
